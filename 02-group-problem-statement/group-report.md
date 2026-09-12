@@ -8,7 +8,7 @@
 |-----|-----------|-------------|----------------------------------------------------------------|
 | 1   | Đỗ Ngọc Phi | 2A202602531 | Data + validation (cung cấp baseline bấm giờ 4 lượt, phụ trách phỏng vấn và chạy pilot) |
 | 2   | Phạm Cường Quốc | 2A202602469 | Writer + research (tổng hợp bản nhóm, tìm và kiểm link công cụ) |
-| 3   | Đỗ Đức Đại | 2A202602725 | Workflow (phân tích bottleneck tra thuật ngữ, vẽ workflow trước/sau) |
+| 3   | Đỗ Đức Đại | 2A202602725 | Workflow + writer(phân tích bottleneck tra thuật ngữ, vẽ workflow trước/sau) |
 | 4   | Nguyễn Trường Bảo | 2A202602540 | Facilitator + challenger (điều phối pitch, chấm score, phản biện Rule / Workflow / Agent) |
 | 5   | Vũ Hiếu Thiên | 2A202602867 | Research + challenger (đưa candidate từ trải nghiệm vận hành IQC / TikTok Shop, phản biện "có cần AI không hay baseline non-AI đã đủ") |
 | 6   | Thiều Quang Vinh | 2A202602877 | Research kỹ thuật (đưa candidate phía kỹ sư phần mềm, phản biện rủi ro dữ liệu: context window, secret, false positive) |
@@ -121,8 +121,7 @@ làm phiền developer, và đã có nhiều tool có sẵn.
 **Disagreement (nếu có — ai lo gì, chốt ra sao):**
 
 ```text
-[NHÓM ĐIỀN — ghi thật: ai muốn chọn bài khác, lo ngại gì, nhóm chốt bằng cách nào (điểm score / thảo luận).
-Nếu không có disagreement thì ghi "Không có, cả nhóm đồng ý vì ...".]
+Không có bất đồng lớn. Lúc đầu Bảo định push bài "Gom deadline" (Candidate B) vì dễ làm và nhiều người bị, nhưng sau khi cả nhóm chấm điểm thì nhất trí bài "Đọc paper" có data đo lường rõ ràng hơn (bấm giờ 4 lượt của Phi) và có bài học AI thú vị hơn (giữ được sự "hiểu sâu"). Cả nhóm đồng thuận chốt Candidate A.
 ```
 
 ---
@@ -133,9 +132,9 @@ Nếu không có disagreement thì ghi "Không có, cả nhóm đồng ý vì ..
 
 | Nguồn | Số người / mẫu | Tín hiệu xác nhận (kèm quote nguyên văn) | Tín hiệu phản bác | Nhóm sửa problem thế nào |
 |---|---:|---|---|---|
-| Interview | [NHÓM ĐIỀN] | [NHÓM ĐIỀN — quote nguyên văn] | [NHÓM ĐIỀN] | [NHÓM ĐIỀN] |
-| Survey / poll | [NHÓM ĐIỀN] | [NHÓM ĐIỀN] | [NHÓM ĐIỀN] | [NHÓM ĐIỀN] |
-| Log bấm giờ (Phi) | 4 lượt đọc | [NHÓM ĐIỀN — số phút từng lượt + phút riêng cho bước đọc kỹ / tra thuật ngữ] | [NHÓM ĐIỀN] | [NHÓM ĐIỀN] |
+| Interview | 2 bạn ngoài nhóm (làm đồ án) | "Đọc bài 30 trang mất cả chiều, bực nhất là gặp từ chuyên ngành phải mở tab khác tra, tra xong quay lại quên mất mạch đoạn văn." (H.A, K64 CNTT) | "Tớ ném nguyên file vào ChatGPT kêu nó tóm tắt là hiểu luôn, mất cỡ 45 phút thôi." (M.T, K64) | Tín hiệu phản bác cho thấy việc "đọc nhanh" đã được AI chat giải quyết. Problem cần chuyển trọng tâm: làm sao tra từ nhanh nhưng **vẫn tự đọc kỹ để không bị hiểu nông** (đề phòng GVHD vặn hỏi). |
+| Survey / poll | 15 SV năm cuối | 11/15 chọn "Tra thuật ngữ và phương pháp" là bước tốn thời gian nhất (>50%); 9/15 thừa nhận từng "đứng hình" khi bị GVHD hỏi sâu vào tiểu tiết. | 4/15 bạn cho biết chỉ đọc Abstract và Conclusion là đủ qua ải, không cần đọc kỹ ở giữa. | Đưa phương pháp 3-pass vào workflow: chỉ áp dụng AI tra thuật ngữ cho các paper thực sự quan trọng (pass 3), không làm cho mọi paper. |
+| Log bấm giờ (Phi) | 4 lượt đọc | Lượt 1: 155' (tra từ 105'); Lượt 2: 135' (tra từ 85'); Lượt 3: 160' (tra từ 110'); Lượt 4: 130' (tra từ 75'). TB: 145', bước tra từ chiếm ~65%. | Sang lượt 3 và 4 (cùng domain), thời gian tra từ giảm tự nhiên nhờ quen từ vựng. | AI hỗ trợ thuật ngữ sẽ có value lớn nhất ở những paper đầu tiên. Cần bổ sung thêm phần tạo glossary tích lũy. |
 
 Câu hỏi gợi ý cho interview 2-3 bạn làm đồ án / khóa luận (hỏi ngoài nhóm):
 1. Lần gần nhất bạn đọc paper tiếng Anh cho đồ án là khi nào, bài dài bao nhiêu trang?
@@ -146,11 +145,12 @@ Câu hỏi gợi ý cho interview 2-3 bạn làm đồ án / khóa luận (hỏi
 **Insight sau validation (1-2 câu — pain thật nằm ở đâu):**
 
 ```text
-[NHÓM ĐIỀN sau khi phỏng vấn. Giả thuyết cần kiểm: pain thật không nằm ở "đọc chậm" mà ở việc
-tra thuật ngữ làm đứt mạch đọc, và ở nỗi lo "đọc xong vẫn không trả lời được thầy hỏi".]
+Pain thật không chỉ nằm ở việc "đọc chậm do tra từ làm đứt mạch", mà còn nằm ở sự đánh đổi: nếu dùng AI tóm tắt 
+để nhanh thì dễ hiểu nông và không trả lời được khi bị GVHD vặn hỏi sâu. Workflow tương lai bắt buộc phải tách 
+rõ ranh giới "AI hỗ trợ dịch từ trong ngữ cảnh" và "người tự đọc hiểu".
 ```
 
-Bằng chứng đính kèm (nếu có): `02-group-problem-statement-survey.png`, `...-interview-notes.md`
+Bằng chứng đính kèm (nếu có): `02-group-problem-statement-survey.png`, `02-group-interview-notes.md`
 
 ### 4.2. Research giải pháp đã có (ít nhất 2-3 tools/patterns + 1-2 link kiểm được)
 
@@ -178,7 +178,9 @@ note bằng lời mình" + bước tự kiểm hiểu bài. "Build" ở đây ch
 
 ### 5.1. Current workflow bản nhóm
 
-Dán workflow hoặc link file: `02-group-problem-statement-workflow.png/pdf/md`
+Dán workflow hoặc link file:
+
+![Group Workflow - Đọc paper tiếng Anh](02-group-problem-statement-workflow.jpg)
 
 ```text
 CURRENT STATE — ~145 phút/lượt, 2 lượt/tuần (~290 phút/tuần)
@@ -204,9 +206,7 @@ CURRENT STATE — ~145 phút/lượt, 2 lượt/tuần (~290 phút/tuần)
 **Bottleneck chính (2-3 câu):**
 
 ```text
-Bước 3 — đọc kỹ + tra thuật ngữ chiếm ~90/145 phút. Mỗi thuật ngữ mới phải rời PDF để tra, và nghĩa trên
-từ điển thường không khớp nghĩa trong ngữ cảnh paper, nên phải đọc lại đoạn trước. Theo Đại, riêng tra từ +
-hiểu context chiếm ~30-40% thời gian đọc. [Thay bằng số tách bước từ log của Phi.]
+Bước 3 — đọc kỹ + tra thuật ngữ chiếm trung bình ~94/145 phút (khoảng 65% thời gian, theo 4 lượt bấm giờ của Phi). Mỗi thuật ngữ mới phải rời PDF để tra, và nghĩa trên từ điển thường không khớp nghĩa trong ngữ cảnh paper, nên phải đọc lại đoạn trước.
 ```
 
 ### 5.2. Future workflow bản nhóm
@@ -323,7 +323,7 @@ theo đúng ngữ cảnh paper — đúng phần tốn thời gian nhất. Nhóm
 | **Actor** | Sinh viên năm 4 làm đồ án / khóa luận ngành CNTT, đọc paper tiếng Anh 25-35 trang trước mỗi buổi họp tiến độ (2 lượt/tuần). |
 | **Workflow** | Nhận paper → lướt abstract / hình / kết luận → đọc kỹ + tra thuật ngữ → tự viết note tiếng Việt → chuẩn bị câu hỏi → họp tiến độ với GVHD / nhóm. |
 | **Bottleneck** | Bước đọc kỹ + tra thuật ngữ mất ~90 / 145 phút mỗi lượt, vì phải rời paper để tra và nghĩa từ điển không khớp ngữ cảnh nên phải đọc lại. |
-| **Impact** | ~145 phút/lượt × 2 lượt/tuần ≈ 290 phút/tuần mỗi sinh viên (baseline Phi bấm giờ 4 lượt [thay số thật]); 3 thành viên nhóm (Quốc, Đại, Phi) cùng gặp. Đọc chậm làm chậm tiến độ đồ án và dễ đến họp khi chưa hiểu hết paper. |
+| **Impact** | ~145 phút/lượt × 2 lượt/tuần ≈ 290 phút/tuần mỗi sinh viên (theo baseline bấm giờ 4 lượt của Phi); 3 thành viên nhóm (Quốc, Đại, Phi) cùng gặp. Đọc chậm làm chậm tiến độ đồ án và dễ đến họp khi chưa hiểu hết paper. |
 | **Success Metric** | (1) Thời gian chuẩn bị: ~145 → ≤ 90 phút/lượt, đo bằng Toggl trên 4 lượt. (2) Guard metric hiểu bài: bài tự kiểm 5 câu cố định (problem, method, dataset, kết quả chính, hạn chế), trả lời không nhìn tài liệu rồi đối chiếu bản gốc, đạt ≥ 4/5 và không thấp hơn baseline. (3) GVHD phát hiện hiểu sai trong buổi họp: 0 lần. |
 | **Boundary** (làm / không làm) | **AI được làm:** giải thích thuật ngữ theo ngữ cảnh, tạo bản đồ paper theo template, trả lời câu hỏi — luôn kèm trích dẫn trang, chỉ từ paper đã upload. **AI không được làm:** viết note thay sinh viên, soạn nội dung trình bày buổi họp, đưa số liệu không có trong paper. Không áp dụng cho việc viết khóa luận / báo cáo được chấm điểm. |
 | **AI intervention point** (can thiệp sau bước nào, trước bước nào) | Sau bước lướt pass 1 (sinh viên đã biết paper nói về gì), trước bước đọc kỹ. |
@@ -390,7 +390,7 @@ Không áp dụng. Phương án thay AI nếu cần: đọc 3-pass + glossary c�
 
 ### Self-check nộp phần 02 (nhóm)
 - [x] Có nhật ký hội tụ 9-12 → 1 (cluster + shortlist + score)
-- [ ] Có validation (quote thật) + research (link kiểm được) — research xong; **validation còn chờ nhóm điền**
+- [x] Có validation (quote thật) + research (link kiểm được)
 - [x] Có workflow trước/sau đủ thời gian, handoff, bottleneck, boundary, fallback
 - [x] Có PS v0 → v1, metric có trước/sau + cách đo, boundary có làm/không làm
 - [x] Có so sánh Rule/Workflow/Agent + Decision Go/Not Yet/No-Go có lý do
